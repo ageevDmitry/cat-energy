@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cat Energy: Форма</title>
+  <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
+  <link href="css/style.min.css" rel="stylesheet">
+  <script>
+    document.createElement("picture");
+
+  </script>
+  <script src="js/picturefill.js" async=""></script>
+</head>
+
+<body>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <header class="header">
+    <div class="header__center-wrapper">
+      <a class="header__logo logo logo--enable" href="index.html">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="logo__img" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
+        </picture>
+      </a>
+      <button class="header__toggle toggle" type="button">
+        <svg class="toggle__icon-mobile-menu" width="24" height="18">
+          <path d="M0 16h24v2H0zm0-8h24v2H0zm0-8h24v2H0z"/>
+        </svg>
+        <svg class="toggle__icon-close" width="24" height="18">
+          <path d="M18 1.3L16.7 0 9 7.7 1.3 0 0 1.3 7.7 9 0 16.7 1.3 18 9 10.3l7.7 7.7 1.3-1.3L10.3 9z"/>
+        </svg>
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <nav class="header__main-nav main-nav main-nav--closed main-nav--nojs">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="form-page">
+    <form class="form" method="get" action="https://echo.htmlacademy.ru">
+      <div class="form__center-wrapper">
+        <h1 class="form__title">Подбор программы</h1>
+        <div class="form__profile-program-wrapper">
+          <div class="form__profile profile">
+            <p class="profile__description">Заполните анкету и мы подберем
+              программу питания для вашего кота
+            </p>
+            <ul class="profile__list">
+              <li class="profile__item">
+                <label class="profile__label">Имя:*
+                  <input class="profile__input" id="user-name" type="text" name="login" value="" placeholder="Барсик"
+                    required="">
+                </label>
+              </li>
+              <li class="profile__item">
+                <label class="profile__label">Вес&nbsp;(кг):*
+                  <input class="profile__input" id="user-weight" type="text" name="weight" value="" placeholder="7"
+                    required="">
+                </label>
+              </li>
+              <li class="profile__item">
+                <label class="profile__label">Возраст&nbsp;(лет):
+                  <input class="profile__input" id="user-age" type="text" name="age" value="" placeholder="7">
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="form__program-categories program-categories">
+            <ul class="program-categories__list">
+              <li class="program-categories__item">
+                <input class="program-categories__input visually-hidden" type="radio" name="categories" value="slim"
+                  id="categories-slim" tabindex="0" aria-label="Похудение" checked="">
+                <label class="program-categories__label" for="categories-slim">Похудение</label>
+              </li>
+              <li class="program-categories__item">
+                <input class="program-categories__input visually-hidden" type="radio" name="categories" value="plump"
+                  id="categories-plump" tabindex="0" aria-label="Похудение">
+                <label class="program-categories__label" for="categories-plump">Набор массы</label>
+              </li>
+              <li class="program-categories__item">
+                <input class="program-categories__input visually-hidden" type="radio" name="categories"
+                  value="dont-know" id="categories-dont-know" tabindex="0" aria-label="Не знаю (нужен ваш совет)">
+                <label class="program-categories__label" for="categories-dont-know">Не знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="form__personal-info personal-info">
+          <h2 class="personal-info__title"><span class="personal-info__title-wrapper">Контактные данные (владельца
+              кота)</span></h2>
+          <ul class="personal-info__list">
+            <li class="personal-info__item">
+              <label class="personal-info__label personal-info__label--mail">
+                E&#8209;mail:*
+                <input class="personal-info__input personal-info__input--mail" id="user-mail" type="email" name="mail"
+                  value="" placeholder="kuklachev@gmail.com" required="">
+              </label>
+            </li>
+            <li class="personal-info__item">
+              <label class="personal-info__label personal-info__label--phone">Телефон:*
+                <input class="personal-info__input personal-info__input--phone" id="user-phone" type="tel"
+                  pattern="8[(]{1}[0-9]{3}[)]{1}[0-9]{3}-[0-9]{2}-[0-9]{2}" name="phone" value=""
+                  placeholder="8(960)900-60-90" required="">
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="form__user-message user-message">
+          <h2 class="user-message__title"><span class="user-message__title-wrapper">Комментарий</span></h2>
+          <textarea class="user-message__text-area" id="user-message" name="message"
+            placeholder="Расскажите обо всех повадках кота" rows="4"></textarea>
+        </div>
+        <div class="form__additional-goods-chekbox additional-goods-chekbox">
+          <h2 class="additional-goods-chekbox__title"><span
+              class="additional-goods-chekbox__title-wrapper">Дополнительно</span></h2>
+          <ul class="additional-goods-chekbox__list">
+            <li class="additional-goods-chekbox__item">
+              <input class="additional-goods-chekbox__input visually-hidden" type="checkbox" name="good" value="sugar"
+                id="good-sugar" tabindex="0" aria-label="Сахарозаменитель" checked>
+              <label class="additional-goods-chekbox__label" for="good-sugar">Сахарозаменитель</label>
+            </li>
+            <li class="additional-goods-chekbox__item">
+              <input class="additional-goods-chekbox__input visually-hidden" type="checkbox" name="good" value="water"
+                id="good-water" tabindex="0" aria-label="Питьевая вода">
+              <label class="additional-goods-chekbox__label" for="good-water">Питьевая вода</label>
+            </li>
+            <li class="additional-goods-chekbox__item">
+              <input class="additional-goods-chekbox__input visually-hidden" type="checkbox" name="good" value="milk"
+                id="good-milk" tabindex="0" aria-label="Молоко">
+              <label class="additional-goods-chekbox__label" for="good-milk">Молоко</label>
+            </li>
+            <li class="additional-goods-chekbox__item">
+              <input class="additional-goods-chekbox__input visually-hidden" type="checkbox" name="good"
+                value="vitamins" id="good-vitamins" tabindex="0" aria-label="Витамины">
+              <label class="additional-goods-chekbox__label" for="good-vitamins">Витамины</label>
+            </li>
+          </ul>
+        </div>
+        <div class="form__button-info-wrapper">
+          <button class="form__button button" type="submit">Отправить заявку</button>
+          <p class="form__field-info">
+            * — Обязательные поля
+          </p>
+        </div>
+      </div>
+    </form>
+    <section class="contacts">
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="contacts__address address">
+        <div class="address__wrapper">
+          <b class="address__slogan">Приглашаем к&nbsp;сотрудничеству дилеров!</b>
+          <address class="address__street-house">ул. Большая Конюшенная, д.&nbsp;19/8
+            <span class="address__city">Санкт-Петербург</span>
+          </address>
+        </div>
+      </div>
+      <div class="contacts__map map">
+        <iframe class="map__google-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+          allowfullscreen>
+        </iframe>
+        <div class="map__center-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1300px)"
+              srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/bg-map-tablet@1x.webp, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@1x.webp 2x">
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
+            <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320"
+              height="362" alt="г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8">
+          </picture>
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/map-pin-tablet.png">
+            <source type="image/webp" srcset="img/map-pin-mobile.webp">
+            <source media="(min-width: 768px)" srcset="img/map-pin-tablet.png">
+            <img class="map__pointer" src="img/map-pin-mobile.png" width="55" height="53" alt="Указатель">
+          </picture>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__center-wrapper">
+      <a class="footer__logo logo--footer logo--enable" href="index.html">
+        <img class="logo__image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
+      </a>
+      <ul class="footer__social-media-list social-media-list">
+        <li class="social-media-list__item">
+          <a class="social-media-list__link" href="#">
+            <span class="visually-hidden">Вконтакте</span>
+            <svg class="social-media-list__svg social-media-list__svg--vk" width="30" height="16">
+              <path d="M17.6 12c-.3 0-.9-.1-1.5-.5-.5-.3-.9-.7-1.3-1.2-.3-.3-.9-.9-1.1-.9-.2.1-.4.7-.3 1.2 0 .1 0 .6-.3.9-.3.3-.8.4-.9.4h-1.4c-.7 0-3.2-.2-5.4-2.3C2.5 7.1.2 2.2.1 2 0 1.6-.1 1.2.2.9s.8-.4 1-.4h3.1c.1 0 .4.1.7.3.3.2.4.5.5.6.7 1.5 1.5 2.8 2.6 4 .1-.4.2-1.4.1-2.3 0-.4-.1-.8-.2-1-.1-.1-.3-.2-.5-.2l-.6-.5c0-.5.5-.9.9-1.1.5-.2 1.3-.3 2.3-.3h.5c.9 0 1.2.1 1.6.1 1.2.3 1.2 1.3 1.1 2.5v1.6c0 .3 0 .8.1 1 .2-.1.6-.5 1.5-1.9.6-.9 1-1.9 1.1-2.1.1-.3.4-.7 1.2-.7h3.4c.7 0 1.2.2 1.3.7.2.5.1 1.3-1.7 3.5-.3.3-.5.6-.7.9-.5.4-.9 1-.9 1.1s.5.5.9.9c1.1.9 1.9 1.7 2.2 2.3.4.6.3 1 .2 1.3-.3.7-1.2.7-1.4.8h-2.9zm-3.9-3.7c.7 0 1.2.6 1.8 1.2.4.4.7.8 1.1 1 .5.3 1 .3 1 .3h2.9c.1 0 .3-.1.4-.1 0 0 0-.1-.1-.1-.3-.5-1-1.3-2-2.1-.9-.7-1.3-1.1-1.4-1.7 0-.6.4-1.1 1.2-2.1.2-.2.4-.5.7-.8 1.1-1.4 1.4-2 1.5-2.3h-3.9c0 .4-.5 1.5-1.1 2.4-1.4 2.1-2 2.4-2.5 2.4-.1 0-.3 0-.4-.1-.7-.4-.7-1.4-.7-2.1V2.6c.1-1.3 0-1.3-.3-1.4-.3-.1-.5-.1-1.4-.1H10c-.5 0-1 0-1.4.1l.2.2c.4.5.4 1.5.4 1.7.1 1.3 0 2.9-.7 3.3-.1 0-.2.1-.4.1-.6 0-1.3-.7-2.5-2.5C5 2.9 4.5 1.8 4.5 1.8s0-.1-.1-.1-.2-.1-.2-.1h-3c.4.9 2.5 5 4.8 7.2 2 1.9 4.3 2 4.7 2h1.4s.2 0 .2-.1v-.1c0-.2 0-2 1.2-2.3h.2z"/>
+            </svg>
+          </a>
+        </li>
+        <li class="social-media-list__item ">
+          <a class="social-media-list__link" href="#">
+            <span class="visually-hidden">Instagram</span>
+            <svg class="social-media-list__svg social-media-list__svg--insta" width="23" height="23">
+              <path d="M11.8 1C13.6 1 15 2.4 15 4.2v7.7c0 1.7-1.4 3.1-3.1 3.1H4.2C2.4 15 1 13.6 1 11.8V4.2C1 2.4 2.4 1 4.2 1h7.6m0-1H4.2C1.9 0 0 1.9 0 4.2v7.7C0 14.1 1.9 16 4.2 16h7.7c2.3 0 4.2-1.9 4.2-4.2V4.2C16 1.9 14.1 0 11.8 0z"/><path  d="M8 4.9c1.7 0 3.1 1.4 3.1 3.1S9.7 11.1 8 11.1 4.9 9.7 4.9 8 6.3 4.9 8 4.9m0-1C5.7 3.9 3.9 5.7 3.9 8s1.8 4.1 4.1 4.1 4.1-1.8 4.1-4.1S10.3 3.9 8 3.9z"/><circle cx="12.3" cy="3.7" r=".9" />
+            </svg>
+          </a>
+        </li>
+        <li class="social-media-list__item">
+          <a class="social-media-list__link" href="#">
+            <span class="visually-hidden">Facebook</span>
+            <svg class="social-media-list__svg social-media-list__svg--fb" width="10" height="19">
+              <path d="M7.1 19H2v-8.8H0V5.8h1.9c-.1-2 .2-3.4 1.1-4.4C3.8.5 5 .1 6.5 0H10v4.2H7.2c-.1.2-.2.8-.2 1.6h3v4.4H7.1V19zm-4-1h2.8V9.1h2.9V6.8H5.9v-.5c0-1.4 0-2.6.7-3.1l.1-.1h2.1V1H6.5c-1.2.1-2 .4-2.6 1-.8.8-1 2.3-.8 4.2l.1.6H1.1v2.3h2V18z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="footer__design design">
+        <a class="design__link" href="https://htmlacademy.ru">HTML Academy
+        </a>
+        <a class="design__logo" href="https://htmlacademy.ru">
+          <span class="visually-hidden">Logo HTML Academy</span>
+          <svg class="design__svg" width="14" height="18">
+            <path d="M30.2 5H30L10.3 7.1v36.2L30 55l19.7-11.7V7.1L30.2 5zm17 36.8L30 52 12.8 41.8V27l17.1 10.2V39l-11.7-7v1.8L30 40.9v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8L29.9 12.8 12.8 23V9.4L30 7.6l17.2 1.8V23z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

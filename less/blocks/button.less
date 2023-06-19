@@ -1,0 +1,41 @@
+.button {
+  display: block;
+  padding: 10px 20px 10px 20px;
+  font-family: @oswald;
+  .text-properties(16px, 20px, 400);
+  text-align: center;
+  text-transform: uppercase;
+  color: @white;
+  background-color: @little-green;
+  border: none;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: #8fc46e;
+  }
+
+  &--index {
+    @media @tablet-width {
+      width: 245px;
+      height: 52px;
+      padding: 15px 28px 14px 24px;
+      .text-properties(20px, 20px, 400);
+    }
+  }
+
+  &--show-all {
+    color: @black;
+    background-color: @grey;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: #c6c6c6;
+    }
+  }
+}

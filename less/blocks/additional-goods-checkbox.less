@@ -1,0 +1,182 @@
+.additional-goods-chekbox {
+  position: relative;
+  padding-top: 24px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100vw;
+    top: 38px;
+    left: 50%;
+    background-color: #68b738;
+    z-index: -1;
+
+    @media @tablet-width {
+      top: 51px;
+      transform: translateX(-50%);
+    }
+
+    @media @desktop-width {
+      top: 57px;
+    }
+  }
+
+  @media @tablet-width {
+    padding: 29px 40px 0 39px;
+  }
+
+  @media @desktop-width {
+    padding: 35px 0 0 0;
+  }
+}
+
+.additional-goods-chekbox__title-wrapper {
+  display: block;
+  padding: 0 22px 0 20px;
+  background-color: @white;
+
+  @media @tablet-width {
+    padding: 0 36px 0 39px;
+  }
+}
+
+.additional-goods-chekbox__title {
+  position: relative;
+  width: 186px;
+  margin: 0;
+  margin-left: -22px;
+  font-family: @oswald;
+  .text-properties(24px, 24px, 400);
+
+  @media @tablet-width {
+    width: 293px;
+    margin-left: -40px;
+    .text-properties(36px, 36px, 400);
+  }
+}
+
+.additional-goods-chekbox__list {
+  .list-style-default;
+  margin: 39px 0 0;
+
+  @media @tablet-width {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 66px;
+  }
+}
+
+.additional-goods-chekbox__item {
+  position: relative;
+  width: 175px;
+  margin: 0 0 25px 45px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media @tablet-width {
+    width: 226px;
+    margin: 0 0 32px 59px;
+  }
+
+  @media @desktop-width {
+    width: 186px;
+    margin: 0 0 32px 58px;
+  }
+}
+
+.additional-goods-chekbox__label {
+  display: block;
+  position: relative;
+  font-family: @oswald;
+  .text-properties(16px, 18px, 400);
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -45px;
+    width: 31px;
+    height: 31px;
+    border: 1px solid @dark-grey;
+    cursor: pointer;
+
+    @media @tablet-width {
+      top: -9px;
+      left: -58px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @media @tablet-width {
+    width: 170px;
+    height: 40px;
+    .text-properties(20px, 20px, 400);
+  }
+}
+
+.additional-goods-chekbox__input:checked + .additional-goods-chekbox__label::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -40px;
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  @media @tablet-width {
+    top: -1px;
+    left: -49px;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.additional-goods-chekbox__input:hover + .additional-goods-chekbox__label:hover::before {
+  border: 1px solid #cfcfcf;
+}
+
+.additional-goods-chekbox__input:focus + .additional-goods-chekbox__label {
+  opacity: 0.6;
+}
+
+.additional-goods-chekbox__input:active + .additional-goods-chekbox__label::before {
+  border: 1px solid @dark-grey;
+  opacity: 0.3;
+}
+
+.additional-goods-chekbox__input:active + .additional-goods-chekbox__label::after {
+  opacity: 0.3;
+}
+
+.additional-goods-chekbox__input:disabled + .additional-goods-chekbox__label {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.additional-goods-chekbox__input:disabled + .additional-goods-chekbox__label::before {
+  cursor: default;
+}
+
+.additional-goods-chekbox__input:disabled + .additional-goods-chekbox__label:hover::before {
+  border: 1px solid @dark-grey;
+}
+
+.additional-goods-chekbox__input:disabled + .additional-goods-chekbox__label::after {
+  cursor: default;
+}
