@@ -1,4 +1,4 @@
-# Интернет-магазин по продаже и подбору правильного питания для котиков catEnergy.
+# Интернет-магазин правильного питания для котиков catEnergy.
 
 Проект разрабатывался в рамках прохождения интенсива "HTML и CSS. Адаптивная вёрстка и автоматизация" в HTML-Academy [https://htmlacademy.ru/intensive/adaptive](https://htmlacademy.ru/intensive/adaptive).
 
