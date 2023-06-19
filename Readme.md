@@ -1,6 +1,6 @@
 # Интернет-магазин по продаже и подбору функционального питания для котиков Cat-Energy.
 
-Личный проект разрабатывался в рамках прохождения интенсива HTML-Academy [https://htmlacademy.ru/intensive/adaptive](https://htmlacademy.ru/intensive/adaptive).\
+Личный проект разрабатывался в рамках прохождения интенсива HTML-Academy [https://htmlacademy.ru/intensive/adaptive](https://htmlacademy.ru/intensive/adaptive).
 
 В ходе работы были сверстаны три страницы интернет-магазина для десктопной, планшетной и мобильной версий экранов.\
 В качестве препроцессора использовался Less, в качестве сборщика Gulp.\
